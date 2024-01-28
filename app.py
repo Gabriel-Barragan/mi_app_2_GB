@@ -1,13 +1,16 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.write("""
-# Visualización de datos de la base de datos **Iris**
+# Visualización de datos de la base de datos Iris
 
 Flores Iris
 """)
+
+st.sidebar.header('Visualización')
 
 iris = datasets.load_iris()
 iris_df = pd.DataFrame(data = iris['data'], columns=iris['feature_names'])
