@@ -27,7 +27,3 @@ st.write(ultimos)
 st.write('Visualización')
 plot_1 = sns.pairplot(data = iris_df[iris_df.columns.difference(['Iris type'])], hue = 'Iris name', palette='Set2')
 st.pyplot(plot_1.fig)
-
-st.write('Correlación')
-cor = iris_df[iris_df.columns.difference(['Iris type'])].corr()
-st.write(cor)
