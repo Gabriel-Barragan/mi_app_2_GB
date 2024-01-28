@@ -25,5 +25,9 @@ ultimos = iris_df.tail()
 st.write(ultimos)
 
 st.write('Visualización')
-plot = sns.pairplot(data = iris_df[iris_df.columns.difference(['Iris type'])], hue = 'Iris name', palette='Set2')
-st.pyplot(plot.fig)
+plot_1 = sns.pairplot(data = iris_df[iris_df.columns.difference(['Iris type'])], hue = 'Iris name', palette='Set2')
+st.pyplot(plot_1.fig)
+
+st.write('Correlación')
+plot_2 =sns.heatmap(iris_df[iris_df.columns.difference(['Iris type'])].corr(), cmap='icefire', annot=True)
+st.pyplot(plot_2.fig)
