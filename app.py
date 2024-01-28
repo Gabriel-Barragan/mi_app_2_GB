@@ -29,5 +29,5 @@ plot_1 = sns.pairplot(data = iris_df[iris_df.columns.difference(['Iris type'])],
 st.pyplot(plot_1.fig)
 
 st.write('Correlación')
-plot_2 =sns.heatmap(iris_df[iris_df.columns.difference(['Iris type'])].corr(), cmap='icefire', annot=True)
-st.pyplot(plot_2.fig)
+cor = iris_df[iris_df.columns.difference(['Iris type'])].corr()
+st.write(cor)
