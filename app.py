@@ -23,3 +23,7 @@ st.write(primeros)
 st.write('Últimos 5 datos')
 ultimos = iris_df.tail()
 st.write(ultimos)
+
+st.write(Visualización)
+plot = sns.pairplot(data = iris_df[iris_df.columns.difference(['Iris type'])], hue = 'Iris name', palette='Set2')
+st.pyplot(plot.fig)
