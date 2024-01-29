@@ -17,7 +17,7 @@ iris_df['Iris type'] = iris['target']
 iris_df['Iris name'] = iris_df['Iris type'].apply(lambda x: 'setosa' if x==0 else ('versicolor' if x==1 else 'virginica'))
 
 st.write('Primeros 5 datos')
-primeros = iris_df.corr()
+primeros = iris_df.head()
 st.write(primeros)
 
 st.write('Últimos 5 datos')
