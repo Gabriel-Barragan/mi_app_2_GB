@@ -11,6 +11,8 @@ st.write("""
 
 st.sidebar.header('Autor: Gabriel Barragán')
 
+tab1, tab2, tab3 = st.tabs(['Descripción de datos', 'Datos numericos', 'Datos categóricos'])
+
 iris = datasets.load_iris()
 iris_df = pd.DataFrame(data = iris['data'], columns=iris['feature_names'])
 iris_df['Iris type'] = iris['target']
