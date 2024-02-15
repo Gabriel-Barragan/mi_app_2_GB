@@ -29,4 +29,4 @@ plot_1 = sns.pairplot(data = iris_df[iris_df.columns.difference(['Iris type'])],
 st.pyplot(plot_1.fig)
 
 plot_2 = sns.heatmap(iris_df[iris_df.columns.difference(['Iris type','Iris name'])].corr(), cmap='icefire')
-st.pyplot(plot_2.fig)
+st.pyplot(plot_2)
